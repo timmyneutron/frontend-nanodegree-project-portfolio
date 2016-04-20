@@ -13,14 +13,31 @@ module.exports = function(grunt) {
       dev: {
         options: {
           engine: 'im',
-          sizes: [{
-            width: 300,
-            suffix: '_1x',
+          sizes: [
+          {
+            width: 360,
+            suffix: "_1x",
             quality: 80
           }, {
-            width: 300,
-            suffix: '_2x',
-            quality: 40
+            width: 455,
+            suffix: "_1x",
+            quality: 80
+          }, {
+            width: 720,
+            suffix: "_1x",
+            quality: 80
+          }, {
+            width: 360,
+            suffix: "_2x",
+            quality: 60
+          }, {
+            width: 455,
+            suffix: "_2x",
+            quality: 60
+          }, {
+            width: 720,
+            suffix: "_2x",
+            quality: 60
           }]
         },
 
@@ -31,27 +48,27 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           src: ['*.{gif,jpg,png}'],
-          cwd: 'images_src/',
-          dest: 'images/'
+          cwd: 'images/images_src/',
+          dest: 'images/resp_images/'
         }]
       }
     },
 
-    /* Clear out the images directory if it exists */
-    clean: {
-      dev: {
-        src: ['images'],
-      },
-    },
+    // /* Clear out the images directory if it exists */
+    // clean: {
+    //   dev: {
+    //     src: ['images/resp_images/'],
+    //   },
+    // },
 
-    /* Generate the images directory if it is missing */
-    mkdir: {
-      dev: {
-        options: {
-          create: ['images']
-        },
-      },
-    },
+    //  Generate the images directory if it is missing
+    // mkdir: {
+    //   dev: {
+    //     options: {
+    //       create: ['images/resp_images/']
+    //     },
+    //   },
+    // },
 
   });
 
@@ -59,6 +76,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-mkdir');
-  grunt.registerTask('default', ['clean', 'mkdir', 'responsive_images']);
+  grunt.registerTask('default', ['responsive_images']);
 
 };

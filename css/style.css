@@ -1,5 +1,7 @@
 body {
     background-color: gray;
+    font-family: "Oxygen";
+
 }
 .rocketlogo {
     width: 80px;
@@ -8,49 +10,79 @@ body {
     float: left;
 }
 
-body {
-    font-family: "Oxygen";
+.bigphoto img {
+    width: 100%;
+    height: auto;
+    border-style: solid;
+    border-color: white;
+    border-radius: 10px;
+    border-width: 5px;
 }
 
-h1, h4 {
-    text-align: right;
+h1 {
+    font-size: 40px;
     text-transform: uppercase;
+    text-align: right;
 }
 
-@media screen and (max-width: 600px) {
-    .rocketlogo {
-        display: none;
-    }
-    h1, h4 {
-        text-align: center;
-    }
-    .img-responsive {
-        display: none;
-    }
+h2 {
+    text-align: left;
+    font-size: 36px;
 }
 
 h3 {
+    font-size: 30px;
+    text-align: center;
+}
+
+h4 {
     font-size: 24px;
+    text-transform: uppercase;
+    text-align: right;
 }
 
 p {
     font-size: 16px;
+    text-align: center;
 }
 
 hr {
-    border: 0px;
+    border: 0;
     height: 5px;
     background: #333;
     background-image: linear-gradient(to right, gray, #00388c, gray);
     /* Source: https://css-tricks.com/examples/hrs/ */
 }
 
-.projects {
-    display: flex;
-    flex-wrap: wrap;
+a {
+    color: #00388c;
 }
 
-.projectphoto {
+.featuredwork {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.projectphoto img {
     width: 100%;
     height: auto;
+    border-style: solid;
+    border-color: white;
+    border-radius: 10px;
+    border-width: 5px;
+}
+
+@media screen and (max-width: 769px) {
+    .rocketlogo {
+        display: none;
+    }
+    h1, h2, h4 {
+        text-align: center;
+    }
+    .bigphoto {
+        display: none;
+    }
+    p {
+        font-size: 30px;
+    }
 }
