@@ -3,21 +3,6 @@ body {
     font-family: "Oxygen";
 
 }
-.rocketlogo {
-    width: 80px;
-    height: 80px;
-    margin-top: 20px;
-    float: left;
-}
-
-.bigphoto img {
-    width: 100%;
-    height: auto;
-    border-style: solid;
-    border-color: white;
-    border-radius: 10px;
-    border-width: 5px;
-}
 
 h1 {
     font-size: 40px;
@@ -41,9 +26,26 @@ h4 {
     text-align: right;
 }
 
-p {
+a {
+    color: #00388c;
+}
+
+.projectphoto p {
     font-size: 16px;
     text-align: center;
+}
+
+.imgattribution p {
+    text-align: left;
+    font-size: 12px;
+    text-align: center;
+}
+
+.rocketlogo {
+    width: 80px;
+    height: 80px;
+    margin-top: 20px;
+    float: left;
 }
 
 hr {
@@ -54,13 +56,13 @@ hr {
     /* Source: https://css-tricks.com/examples/hrs/ */
 }
 
-a {
-    color: #00388c;
-}
-
-.featuredwork {
-    display: flex;
-    flex-flow: row wrap;
+.bigphoto img {
+    width: 100%;
+    height: auto;
+    border-style: solid;
+    border-color: white;
+    border-radius: 10px;
+    border-width: 5px;
 }
 
 .projectphoto img {
@@ -70,6 +72,11 @@ a {
     border-color: white;
     border-radius: 10px;
     border-width: 5px;
+}
+
+.featuredwork {
+    display: flex;
+    flex-flow: row wrap;
 }
 
 @media screen and (max-width: 769px) {
@@ -82,7 +89,7 @@ a {
     .bigphoto {
         display: none;
     }
-    p {
+    .projectphoto p {
         font-size: 30px;
     }
 }
